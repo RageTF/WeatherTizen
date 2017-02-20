@@ -5,5 +5,8 @@
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="icon.png"/>
     <name>Weather</name>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/download"/>
+    <access origin="*" subdomains="true"></access>
     <tizen:profile name="mobile"/>
 </widget>
