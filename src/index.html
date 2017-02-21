@@ -10,40 +10,23 @@
 <title>Tizen Web IDE - Tizen - jQuery Mobile - Single-Page</title>
 
 <link rel="stylesheet" href="../css/jquery.mobile-1.3.2.css" />
+<link rel="stylesheet" href="../css/style.css" />
 <script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../js/jquery.mobile-1.3.2.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript" src="../js/apiweather.js"></script>
-<link rel="stylesheet" href="../css/style.css" />
-
-<script type="text/javascript">
-	function onClick() {
-
-		var nameCity = "Moscow";
-		var lat = 35;
-		var lon = 139;
-
-		getWeatherByName(nameCity,onSuccess,onError,onComplete);
-
-	}
-
-	var onSuccess = function(data) {
-		alert("Success");
-		console.log(data.city.name);
-	}
-	var onError = function() {
-		alert("Error");
-	}
-	var onComplete = function() {
-		alert("Complete");
-	}
-</script>
 
 </head>
 
 <body>
-
-	<button onclick="onClick()">Button</button>
-
+	<div id = "main" class = "page">
+		<div class = "contents">
+			<input type = "text" class = "input-text" id ="city_name">
+			<input type="button" value="Search" id="btn_search">
+			<span id="current_temp" class = "text"></span><br>
+            <span id="city_name_result" class = "text"></span><br>
+            <img src="" id="weather_image">
+		</div>
+	</div>
 </body>
 </html>

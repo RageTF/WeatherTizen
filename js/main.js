@@ -36,10 +36,32 @@ var init = function () {
         }
     }
     
+    $("#btn_search").bind("click", function(event, ui){
+    	var cityName=$("#city_name").val();
+    	getWeatherByName(cityName,onSuccess,onError,onComplete);
+    });
+    
     // add eventListener for tizenhwkey (Back Button)
     document.addEventListener( 'tizenhwkey', backEvent );
     backEventListener = backEvent;
 };
 
+var onSuccess = function(data) {
+	$("#city_name_result").text(data.name);
+	var temp=(data.main.temp - 273.15).toFixed(1);
+	var image="http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+	$("#weather_image").attr("src", image);
+	$("#weather_image").attr("height", 100);
+	$("#weather_image").attr("width", 100);
+	$("#current_temp").text(temp+" C");
+}
+var onError = function() {
+	$("#city_name_result").text("Error");
+}
+var onComplete = function() {
+}
+
 $(document).bind( 'pageinit', init );
 $(document).unload( unregister );
+
+
