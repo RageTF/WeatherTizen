@@ -15,11 +15,60 @@
 <script type="text/javascript" src="../js/jquery.mobile-1.3.2.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript" src="../js/apiweather.js"></script>
+<script type="text/javascript" src="../js/database.js"></script>
+
+<script type="text/javascript">
+
+function onClick() {
+	putWeatherCity(5648, 'Kazan', '{name: Kazan}',onSuccessInsert,onErrorInsert);
+	
+}
+
+function onClickGet(){
+	getWeatherFromDatabaseByCityId(5648,onSuccessCallback, onErrorCallback);
+}
+
+function onClickUpdate(){
+	updateWeatherByCityId(5648,"{UPDATE}", onSuccessUpdate, onErrorUpdate)
+}
+
+var onSuccessUpdate = function(){
+	alert("Update Success");
+}
+
+var onErrorUpdate = function(){
+	alert("Update Error");
+}
+
+var onSuccessCallback = function (results) {
+	var weatherArray=[];
+	var i, weatherNumber = results.rows.length;
+	for (i = 0; i < weatherNumber; i++) {
+		var  weather= results.rows.item(i);
+		weatherArray.push(weather);
+	}
+	weatherArray.forEach(function(item,i,array){
+			console.log(item.city_id+" "+item.city_name+" "+item.city_weather);
+		});
+	alert("Success Get");
+}
+
+var onErrorCallback = function() {
+	alert("Error Get");
+}
+var onSuccessInsert = function(){
+	alert("Success Insert");
+}
+var onErrorInsert = function(){
+	alert("Error Insert");
+}
+
+</script>
 
 </head>
 
-<body>
-	<div id = "main" class = "page">
+<body onload="openDB()">
+	<!-- <div id = "main" class = "page">
 		<div class = "contents">
 			<input type = "text" class = "input-text" id ="city_name">
 			<input type="button" value="Search" id="btn_search">
@@ -27,6 +76,11 @@
             <span id="city_name_result" class = "text"></span><br>
             <img src="" id="weather_image">
 		</div>
-	</div>
+	</div> -->
+	
+	<button onclick="onClick()">Put</button>
+	<button onclick="onClickGet()">Get</button>
+	<button onclick="onClickUpdate()">Update</button>
+	
 </body>
 </html>

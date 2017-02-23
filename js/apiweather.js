@@ -1,4 +1,4 @@
-var apiAddress = 'http://api.openweathermap.org/data/2.5/weather';
+var apiAddress = 'http://api.openweathermap.org/data/2.5/forecast';
 var appId = '199e51a7251d81ae172475ea5b313f94';
 
 // НЕ ЮЗАТЬ
@@ -14,6 +14,14 @@ function getWeather(params,onSuccess,onError, onComplete) {
 			complete : onComplete
 		});
 	});
+}
+
+//Выводит погоду по id
+function getWeatherById(idCity, onSuccess, onError, onComplete){
+	return getWeather({
+		'id':idCity,
+		'APPID' : appId
+	}, onSuccess, onError, onComplete)
 }
 
 // Выводит погоду по названию
