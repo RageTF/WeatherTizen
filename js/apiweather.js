@@ -1,3 +1,4 @@
+
 var apiAddress = 'http://api.openweathermap.org/data/2.5/forecast';
 var appId = '199e51a7251d81ae172475ea5b313f94';
 

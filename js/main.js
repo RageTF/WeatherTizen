@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> Design
 var backEventListener = null;
 
 var unregister = function() {
@@ -37,8 +40,11 @@ var init = function () {
         }
     }
     
+<<<<<<< HEAD
     openDB();
     
+=======
+>>>>>>> Design
     $("#btn_search").bind("click", function(event, ui){
     	var cityName=$("#city_name").val();
     	getWeatherByName(cityName,onSuccess,onError,onComplete);

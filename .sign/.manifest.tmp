@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 .git/COMMIT_EDITMSG__DEL__3OnNehSy0CKs8cnWgxgSEXDun/qYT9dnvpUqL3Y4bpw=
 .git/FETCH_HEAD__DEL__4RZpaX4Znq7vgWlmVzLrNYIfeyr9RHe+76AArcUiPHc=
 .git/HEAD__DEL__9vK5RfbEEbAro9qces6I3PcbavZbouDYmqgpAAQrWhA=
 .git/ORIG_HEAD__DEL__Reo46jLIOSdQENawBAHUBCWP7gYXJ9mp6E2762iB3ew=
 .git/config__DEL__0aETALtYI8i/EoVjaRQwvXb6aqwFQsqccrPM+l+zdkA=
+=======
+.git/COMMIT_EDITMSG__DEL__tkDoQLGdN4Zgsy+1GuGNZ9zLSoWWop571ywbKuWSj0E=
+.git/HEAD__DEL__9vK5RfbEEbAro9qces6I3PcbavZbouDYmqgpAAQrWhA=
+.git/config__DEL__h6viMQkqlGt6G+yA1Kun9kstgfxNhNusOQpEG7EEhZw=
+>>>>>>> Design
 .git/description__DEL__hatsFj1DoX6pz3eIMIvKFGbxsKjRzJLibpv2PaQGKu4=
 .git/hooks/applypatch-msg.sample__DEL__AiNJeguLAzqlijpSG4YphpOGz3qw4vEBlj0yiqYhk/c=
 .git/hooks/commit-msg.sample__DEL__H3TV6SkpebVz69WXQdRsuT/zkazdCD00C5Q3B1PZJDc=
@@ -11,6 +17,7 @@
 .git/hooks/pre-commit.sample__DEL__EscjI1Ex8cVXbGUqwqCgB/JhqTwN3ERbHc7mzZjjB4g=
 .git/hooks/pre-push.sample__DEL__SxEZ4eE6ISVxl29K7neEfNvUCXhUbWJzpVfiOJgaQNE=
 .git/hooks/pre-rebase.sample__DEL__0kux7F1K1w/BtRv0x5JXlfyVJvUzh7oyzBHKL9l1Wlk=
+<<<<<<< HEAD
 .git/hooks/pre-receive.sample__DEL__pMPSuce7P9jRRBwxvU7nGlldZrRPz0ndsxAlIyAWmYk=
 .git/hooks/prepare-commit-msg.sample__DEL__9+Vie1om0AJu9QNS9zkzUO5YzBAfXoM3+US1elA5low=
 .git/hooks/update.sample__DEL__dRwDcyACTsLuJ1fz/64LEK0slGNnaE5wWdTcl+rH5DE=
@@ -97,6 +104,54 @@
 .git/refs/remotes/origin/master__DEL__6bxmnqpa6FQP456HOym0LXtI8kv9koLff/IttVYXe/4=
 .gitignore__DEL__WTsFsqcq+uNgamHd7PQDnTzz5bHCOqF1HHPtfW8pV84=
 config.xml__DEL__cgTLznIksdG3JF+FDLNpc9dbZkx/iif3kzy9t/6A1lQ=
+=======
+.git/hooks/prepare-commit-msg.sample__DEL__9+Vie1om0AJu9QNS9zkzUO5YzBAfXoM3+US1elA5low=
+.git/hooks/update.sample__DEL__dRwDcyACTsLuJ1fz/64LEK0slGNnaE5wWdTcl+rH5DE=
+.git/index__DEL__8yYF8CMegtp/j/fcvKL2v1RRrOko+19dFvrhrLqBWuQ=
+.git/info/exclude__DEL__ZnH+g7egfIky7okWTR8nk7IxgFjri5jcXAbuClo7DsE=
+.git/logs/HEAD__DEL__OhXouuPPHZGqNJ4sZ7GVJgV+uyc3QfE8BblY1XN9J7w=
+.git/logs/refs/heads/master__DEL__OhXouuPPHZGqNJ4sZ7GVJgV+uyc3QfE8BblY1XN9J7w=
+.git/logs/refs/remotes/origin/master__DEL__/ZTpU61rXBCIErs1533rwAdE5GM/MtQ9A8iO8w8IFHU=
+.git/objects/04/3bfcd521163a123843f15ac2fba220eab51d05__DEL__FHKgs+lXi66JBzCarRxpvwMKs6Wnz7vIb0dp0kZCd80=
+.git/objects/11/573c630d8cdbb2602d9290125cbade2b005854__DEL__odmBv1xs6S8lIsNBkP0omQbJXJWQI3URuDDLRD4PBno=
+.git/objects/12/455c907a4f40205e89e0ff841cde2be105cf50__DEL__dLwfhpiRG/6yOHI6sT5mXAcYTPRgGhwv1Q9GgiJ4gK0=
+.git/objects/13/4d74ed76dfde4995c47fc5677515d02a89bea7__DEL__D7ZhnI3LBQFgKGriJ6o/ArwaYq53w1USCb/GhAPZMbw=
+.git/objects/32/bfc397ece651a6ae55207f566d4269de4acacf__DEL__ZN3tiqo/i1kIAG9Pdm58CtIfc9AtJ31HyPFLw7whvW4=
+.git/objects/34/19b81f6a8896807e1e6af0f14c8415fbe39da6__DEL__fVd6+tUO4p3Lf93JDnUsF+qT1KGVl3ShpzBbpeIKvQI=
+.git/objects/39/ff279574b2362694030d4b232488526656fa15__DEL__28/EJZj2Xg8FkxKvaCyNQYHK/sma09NCDqeUEJDrB4w=
+.git/objects/4d/2d7cd2ea2f5a4073f8f44498fccee866668f2c__DEL__4xEPuyW70iFLVxN4RairmLsDlFx7jKwidFtU4TiAntc=
+.git/objects/4d/2df0467016b701ffdac88bb214217c914542b0__DEL__JaSLW61QOauZcZRb55MRiCxveOGBDIEdNSupSkGY1+0=
+.git/objects/5c/ecfd87e49112b8222595e58ab8dd3539511521__DEL__voLyxkvg77YUmaX1MJvUS01wAuHEC2SYe82QjSgY6mM=
+.git/objects/67/81bba88b5d1b95a0513ae68d90806afeb99a71__DEL__LsLNw18Uk805KhWjPaAXmz/4+ufkbe6wC1cBatCVHS4=
+.git/objects/6a/1a5f6f3d533f231c4c2be5585141b723661176__DEL__/kYKhSRJf89P0MP+lbR/pOB82vmyHFjr/j+OCvLlTA4=
+.git/objects/79/1646384bf6cf9cf0720c78cfbdc8ffb6d94e7e__DEL__woeJYr71GZ5Jp6YUMJCQoQGwRuZHRiEuoGhrNZQsgoQ=
+.git/objects/80/441a748abc35708bbd6be239cc9a49ebecc04e__DEL__SdyrVxYkFL4x3xvzsGmi9GAvRqtsB+E8uAM/DQl/zT8=
+.git/objects/82/ad554a86cf2c2f5fe61cc46b4b3fe6dff3c879__DEL__RBrcF0TOT5u3PKip+K2Whsr6SI1guNm0v4UYIDRG5Bg=
+.git/objects/87/7649f7d05468f4a7a5a6aa54ba8c488293b980__DEL__+9h4xd8/P3MgqnqCiTHsBRRpo7iOkb0ubRwIT6N5BjQ=
+.git/objects/8b/691db12d3272dac9ca14e193f424bf8f72c52b__DEL__CL1voFMPUOQtjWIh4tyna52YRxNavf3JlQ3Oxixx3QA=
+.git/objects/96/a75f0b95b6c0185467b6a9048e9724103b4185__DEL__gKaf3Qa3SlN49OHeT2MOQ+VBC4pQLj6fExexNIrxGvU=
+.git/objects/a1/719c55f405b5edbfa3c21a43e5abe61ab38f3d__DEL__WyKhrXupqSE/Mn19OnSnNh8Kkl9z8JpMAJBOahmGjFg=
+.git/objects/a3/23120c77108ce6ff3e1d1e698ce9b18201a489__DEL__gOIWudTs0xIFZkRjbiSO1zwVm+sMUvF56NCTFKXlWW4=
+.git/objects/b6/9d1b949eb884f2d9aadd1cf70be40493db0733__DEL__E712XaOtrtWBVMtI8uXomnc6cMprTpEg9EAvo2I3Vgo=
+.git/objects/bc/a0b6aad4570656c98760c9cd98fd81d9f59e5e__DEL__1jpr0c8NMlEjU3rMwjMdaeCaJuGH1MVCF2rN7epRfrI=
+.git/objects/cf/e35a9f520fbe3505e3d0481a1f462ba6f1f9e7__DEL__cCfigqmytliNLtxhKwEz3C1P0XG02ODgJ+wZxnsI9i0=
+.git/objects/d2/265954f8bfdf4abfabc77d05692c3fdf102f15__DEL__K929MfKzoZSQ/2d0AlYMzPlny1JuW5Rw4NZjBDlpTdw=
+.git/objects/e2/c203fe978b83f4ca8d1ba97633f5a5d50bd53b__DEL__cTjvB8Ha0feVOk/p/3g8pheTeLqTW8ZBO0cH0qVSMDw=
+.git/objects/ed/4bbc0d0464ed470f8b2cd3f5b1e3fe5f8f54b7__DEL__Ho0NTkN8su80dSNpsK+9WYlBAvFNQCuOMKf1+m/NVmQ=
+.git/objects/f0/cc4d3d3fd597c98e291ce4fbcb0a55e4afd51b__DEL__R0FQ2f/47ET6EIW25sWlB66YqjU8hIAjpoyXwiknZqs=
+.git/objects/f1/cc1fd7a086aac28777c25ed736c46e2cb81a71__DEL__ksRznRa1obiVTFoJLLC7lzNiE/qLLYKGfdhlCKgLDxM=
+.git/objects/f8/7f6b1778610226635f3facbc0ea8afee72da14__DEL__VH4xYLisjZDX+vcI9XVb4cUoUdOCKxZKCNV5dV1Tdqg=
+.git/objects/fd/1a189c21fed1c7ba00c4bb4fad407bd6d1e5f9__DEL__PDHhOy3lQgPh0GfArPJ9ThhuFTnmeTIhWXjiJxhKMMM=
+.git/objects/fd/c0c922d65f883da4eeb6e0608808ebd61755a8__DEL__VhTYwrw7hzd2cOSRE4bkjBdO8AsBxeTtI9jGGutAUo4=
+.git/objects/ff/e9526622df01dc55fc0e1f4c3ff649927f1c05__DEL__1n6xJeJyqzdu8e+RZ/z3Bb3KWgen/JbdXkBrCJnPRjc=
+.git/refs/heads/master__DEL__Q4Y4tJVGPUo56v2wyftKlQL5WXssp+ODMXYsofK+YR8=
+.git/refs/remotes/origin/master__DEL__Q4Y4tJVGPUo56v2wyftKlQL5WXssp+ODMXYsofK+YR8=
+.gitignore__DEL__JV0+8XP9epS4Uuh1ywGPLJoXRWK75doAkBsKvLpOCNM=
+config.xml__DEL__5Ob064OWPxOrG0MvhqBuVSxHMZ/VbtBYY0mwN1cXV6c=
+css/images/01d.png__DEL__DO78p1XP4GTKW33cbseX/QKncIEst3u70M5SFGeG8AY=
+css/images/02n.png__DEL__QeqYD8XxKbsDBhjKNs/cdQ+geb3XqPxVqD4q4iFmARU=
+css/images/09d.png__DEL__+DbXPoKDQVU8U7vv3BH2k6ok++zer2cY034ZWh/AAPs=
+>>>>>>> Design
 css/images/Cloud-icon.png__DEL__yUjGH4vS+CL1EL6bcycJRXt719F2xb9qdHHdifDMAiY=
 css/images/ajax-loader.gif__DEL__atFZeQWHru0uJZg1bqZZ/jJ8mZdvckOJmwEWlbmtUm8=
 css/images/icons-18-black.png__DEL__YkloCw4iOzmFvDlLV2Pcmdkx/LYvMmxVJldjvs8XHjs=
@@ -108,6 +163,7 @@ css/jqm-docs.css__DEL__bHJ1XHdpZMNiWOrjCEVrVHOMSRugvNMIR0qMXRbpz7o=
 css/jquery.mobile-1.3.2.css__DEL__7gIa62h0lipubOV/M9KqIko5g+2iNfi3QIRHHJK3KrQ=
 css/jquery.mobile.structure-1.3.2.css__DEL__Ltwods9Mn1dYj+i5XD0dc00bEpY5RkEFkYVva+vXlk0=
 css/jquery.mobile.theme-1.3.2.css__DEL__QwFf65ufHMPHMzhxJU22SBoG6/MRQMlva7EErRy0s5M=
+<<<<<<< HEAD
 css/style.css__DEL__3ghvHNizfW0QyETJdfP6JYcHHiwsYxcErhf7CiloaXY=
 icon.png__DEL__1d0oEZHqPn+QzNzGIHwj9ODby6x9ggFs9uOsav6jPNs=
 js/apiweather.js__DEL__aESqpHyk35qpCBhyIHaJPOGdZB1fr9EfRS8NVFsWQVg=
@@ -119,3 +175,17 @@ js/main.js__DEL__e9gXzq0LD+BkYKDEHjP5FcrQMNgGHNZpl80Ktxt9uVQ=
 src/index.html__DEL__mJk6kCsrTb5iJvESLF8pP8FeVGV5jY/KmzQ812tkVQY=
 version.txt__DEL__MPl0zl/4pJM1CEzTWOGty3/730AfpxtZpYxDSagK0WI=
 author-signature.xml__DEL__zZYZUSd2ZJKHVMKIq/NXc+O0JH8+0sw26058QThBDEY=
+=======
+css/style.css__DEL__VKwzZf+1HIKuJGQekKID5+F0hYgr/+sXzaz7sLz9Ejg=
+css/w3-theme.css__DEL__YJP+ZlTjq8Q5AmHEI0mlOYpzo/OMlBTO/SvVJ5DQrow=
+css/w3.css__DEL__OtNwSYbDxn8I/KH79+e/wc+4XZ2xD+4Vhuxbq9cTrkY=
+icon.png__DEL__EX3jXo/kkVM61HEGct/R63oNCJ91SjlKfPnHqKuahSo=
+js/apiweather.js__DEL__qtqMKxT8Zt63agdwUk2FcDHHSkz1SAEmHXwvWBBx08E=
+js/jqm-docs.js__DEL__jVwxoOQ3EdEfRL8JbpeUzsa+dA1N6nyRjN8lFrz6Vt4=
+js/jquery-1.9.1.js__DEL__e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA=
+js/jquery.mobile-1.3.2.js__DEL__5MWy5CRjqtBst1PQPL64vnegpOlJaa0tDCXJO+GYA7I=
+js/main.js__DEL__TbgdAMAFvlAs/GkQSvXjzbCrwE3lK+PtQ3NyGgL5tVc=
+src/index.html__DEL__2zKBrJHD0+IrliMJ+74KZHOS417+5vR1GNhtiO+KDQE=
+version.txt__DEL__MPl0zl/4pJM1CEzTWOGty3/730AfpxtZpYxDSagK0WI=
+author-signature.xml__DEL__aJsi5N+U8JVNaEruiYTaQ+EhVhZ7S6787D1Lb9Csh88=
+>>>>>>> Design
