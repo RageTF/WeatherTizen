@@ -103,3 +103,22 @@ function updateWeatherByCityId(idCity, weatherJSON, onSuccessUpdate,onErrorUpdat
 								onErrorUpdate);
 			});
 }
+
+/*
+ * Удаляет из БД по ID. В onSuccessDelete и onErrorDelete приходя id удаляемого города.
+ * 
+ */
+
+function removeWeatherByCityId(idCity,onSuccessDelete,onErrorDelete){
+	database.transaction(function(transaction) {
+		transaction.executeSql(
+						("DELETE FROM " + weatherDataTableName + " WHERE city_id=?"),
+						[idCity], 
+						function(){
+							onSuccessDelete(cityId);
+						},
+						function(){
+							onErrorDelete(cityId);
+						});
+	});
+}
