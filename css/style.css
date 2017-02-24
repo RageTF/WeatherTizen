@@ -10,11 +10,3 @@ body{
 	display:block;
 	height:100%;
 }
-.my-footer {
-background:#ccc;
-bottom:0px;
-left:0px;
-position:fixed;
-height:30px;
-  width:100%;
-}
