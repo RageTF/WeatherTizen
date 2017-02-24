@@ -37,6 +37,8 @@ var init = function () {
         }
     }
     
+    openDB();
+    
     $("#btn_search").bind("click", function(event, ui){
     	var cityName=$("#city_name").val();
     	getWeatherByName(cityName,onSuccess,onError,onComplete);

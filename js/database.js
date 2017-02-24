@@ -28,17 +28,22 @@ function openDB() {
 
 /*
  * Занести запись в базу данных. -- idCity - id города из JSON. -- nameCity -
- * название города. -- weatherCity - JSON в текстовом формате.
+ * название города. -- weatherCityJson - JSON объект.
  */
-function putWeatherCity(idCity, nameCity, weatherCity, onSuccessInsert,
+function putWeatherCity(idCity, nameCity, weatherCityJson, onSuccessInsert,
 		onErrorInsert) {
 	database
 			.transaction(function(transaction) {
 				transaction
 						.executeSql(
 								("INSERT INTO " + weatherDataTableName + " (city_id,city_name,city_weather) VALUES(?,?,?)"),
-								[ idCity, nameCity, weatherCity ],
-								onSuccessInsert, onErrorInsert);
+								[ idCity, nameCity, JSON.stringify(weatherCityJson) ],
+								function() {
+									onSuccessInsert(weatherCityJson);
+								}, 
+								function () {
+									onErrorInsert(weatherCityJson);
+								});
 			});
 }
 

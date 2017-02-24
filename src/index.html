@@ -19,9 +19,13 @@
 
 <script type="text/javascript">
 
+function onClick2(){
+	putWeatherCity(5648, 'Maoscow', '{name: LONGER}',onSuccessInsert,onErrorInsert);
+}
+
 function onClick() {
+	var data="Str";
 	putWeatherCity(5648, 'Kazan', '{name: Kazan}',onSuccessInsert,onErrorInsert);
-	
 }
 
 function onClickGet(){
@@ -56,10 +60,10 @@ var onSuccessCallback = function (results) {
 var onErrorCallback = function() {
 	alert("Error Get");
 }
-var onSuccessInsert = function(){
+function onSuccessInsert(data){
 	alert("Success Insert");
 }
-var onErrorInsert = function(){
+function onErrorInsert(data){
 	alert("Error Insert");
 }
 
@@ -67,7 +71,7 @@ var onErrorInsert = function(){
 
 </head>
 
-<body onload="openDB()">
+<body>
 	<!-- <div id = "main" class = "page">
 		<div class = "contents">
 			<input type = "text" class = "input-text" id ="city_name">
@@ -79,6 +83,7 @@ var onErrorInsert = function(){
 	</div> -->
 	
 	<button onclick="onClick()">Put</button>
+	<button onclick="onClick2()">Put2</button>
 	<button onclick="onClickGet()">Get</button>
 	<button onclick="onClickUpdate()">Update</button>
 	
