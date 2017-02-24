@@ -1,0 +1,12 @@
+html,
+body{
+	padding:10;
+}
+.my-clouse-button{
+	margin-right: 4px;
+	margin-bottom: 20px;
+}
+.my-link{
+	display:block;
+	height:100%;
+}
