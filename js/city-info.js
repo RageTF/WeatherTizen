@@ -25,7 +25,7 @@ var onGetSuccess = function(data){
 				'</div>'+
 				'<div class = "w3-col s4 w3-white" align = "center">'+
 					'<h3>'+Math.round(item.main.temp-273.15)+'°C</h3>'+
-					'<img src = "http://openweathermap.org/img/w/'+item.weather[0].icon+'.png">'+
+					'<img src = "../css/images/'+item.weather[0].icon+'.png">'+
 				'</div>'+
 			'</div>'+
 	'</li>');
