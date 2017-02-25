@@ -43,6 +43,7 @@ var init = function() {
 			"click",
 			function(event, ui) {
 				var cityName = $("#input_search").val();
+				$("#input_search").val('');
 				getWeatherByName(cityName, onSearchSuccess, onSearchError,
 						onSearchComplete);
 			});
@@ -245,11 +246,11 @@ var findLocationError = function(error) {
 }
 
 var onGeolocationSuccess = function(data) {
-	alert(data.name);
 	$('#current-weather-container')
 			.html(
 					'<div class = " w3-panel w3-col s8">'
 							+ '<h3 id="geo_city"></h3>'
+							+ '<p>Current location weather</p>'
 							+ '</div>'
 							+ '<div class = "w3-col s4 w3-white w3-padding-large" align = "center">'
 							+ '<h3 id="geo_temp"></h3>'
