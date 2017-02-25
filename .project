@@ -13,13 +13,10 @@
 		<buildCommand>
 			<name>org.tizen.web.project.builder.WebBuilder</name>
 			<arguments>
-<<<<<<< HEAD
 				<dictionary>
 					<key>usedLibraryType</key>
 					<value>jQueryMobile</value>
 				</dictionary>
-=======
->>>>>>> Design
 			</arguments>
 		</buildCommand>
 	</buildSpec>
