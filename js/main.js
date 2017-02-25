@@ -35,7 +35,6 @@ var init = function() {
 			}
 		}
 	}
-
 	openDB();
 	getAndShowData();
 	getAndUpdateData();
@@ -49,7 +48,9 @@ var init = function() {
 			});
 	$("#refresh_btn").bind("click", function(event, ui) {
 		getAndUpdateData();
+		geolocationWeather();
 	});
+
 	// add eventListener for tizenhwkey (Back Button)
 	document.addEventListener('tizenhwkey', backEvent);
 	backEventListener = backEvent;
@@ -60,13 +61,22 @@ var onSearchSuccess = function(data) {
 }
 
 var inputData = function(data) {
+	var currWeather = 0;
+	var now = new Date();
+	now = now.getTime() - (1000 * 60 * 60 * 3);
+	while (data.list.length - 1 > currWeather
+			&& data.list[currWeather].dt * 1000 <= now) {
+		currWeather++;
+	}
 	$('#weather-list')
 			.append(
 					'<li id = "'
 							+ data.city.id
 							+ '">'
 							+ '<div class="w3-row w3-card-2 w3-round-small w3-border w3-border-blue">'
-							+ '<div class = " w3-panel w3-col s8">'
+							+ '<div id="'
+							+ data.city.id
+							+ '_div" class = " w3-panel w3-col s8">'
 							+ '<h3 id="'
 							+ data.city.id
 							+ '_name">'
@@ -77,16 +87,19 @@ var inputData = function(data) {
 							+ '<span id="'
 							+ data.city.id
 							+ '_btn" class="w3-closebtn w3-medium w3-display-topright w3-padding-small">&times;</span>'
-							+ '<h3 id="' + data.city.id + '_temp">'
-							+ Math.round(data.list[0].main.temp - 273.15)
+							+ '<h3 id="'
+							+ data.city.id
+							+ '_temp">'
+							+ Math
+									.round(data.list[currWeather].main.temp - 273.15)
 							+ ' °C</h3>' + '<img id="' + data.city.id
-							+ '_img" src = "http://openweathermap.org/img/w/'
-							+ data.list[0].weather[0].icon + '.png">'
+							+ '_img" src = "../css/images/'
+							+ data.list[currWeather].weather[0].icon + '.png">'
 							+ '</div>' + '</div>' + '</li>');
 	$('#' + data.city.id + '_btn').bind("click", function(event, ui) {
 		removeWeatherByCityId(data.city.id, onDeleteSuccess, onDeleteError);
 	});
-	$('#' + data.city.id).bind("click", function(event, ui) {
+	$('#' + data.city.id + '_div').bind("click", function(event, ui) {
 		localStorage.param = data.city.id;
 		window.open('city-info.html');
 	});
@@ -144,13 +157,20 @@ var onSearchUpdateSuccess = function(data) {
 
 var refreshData = function(list) {
 	list.forEach(function(item, i, arr) {
+		var currWeather = 0;
+		var now = new Date();
+		now = now.getTime() - (1000 * 60 * 60 * 3);
+		while ((item.list.length - 1 > currWeather)
+				&& (item.list[currWeather].dt * 1000 <= now)) {
+			currWeather++;
+		}
 		$('#' + item.city.id + '_name').html(item.city.name);
 		$('#' + item.city.id + '_temp').html(
-				Math.round(item.list[0].main.temp - 273.15) + ' °C');
+				Math.round(item.list[currWeather].main.temp - 273.15) + ' °C');
 		$('#' + item.city.id + '_img').attr(
 				'src',
-				'http://openweathermap.org/img/w/'
-						+ item.list[0].weather[0].icon + '.png');
+				'../css/images/' + item.list[currWeather].weather[0].icon
+						+ '.png');
 		$('#' + item.city.id + '_btn').bind(
 				"click",
 				function(event, ui) {
@@ -202,55 +222,50 @@ var geolocationWeather = function() {
 		navigator.geolocation.getCurrentPosition(findLocationSuccess,
 				findLocationError, options);
 	} else {
-		$('#main')
-				.append(
-						'<div id = "current-weather-container" class="w3-card-2 w3-blue w3-round-small w3-center w3-padding">'
-								+ '<h3>Sorry, but geolocation are not available</h3>'
-								+ '</div>');
+		$('#current-weather-container').html(
+				'<div class="w3-card-2 w3-blue w3-round-small w3-center w3-padding">'
+						+ '<h3>Sorry, but geolocation are not available</h3>'
+						+ '</div>');
 	}
 }
 
 var findLocationSuccess = function(position) {
 	var lon = position.coord.longitude;
 	var lat = position.coord.latitude;
-	getWeatherByCoordinats(55.79, 49.12, onGeolocationSuccess,
+
+	getCurrentWeatherByCoordinates(lat, lon, onGeolocationSuccess,
 			onGeolocationError, onComplete);
 }
 
 var findLocationError = function(error) {
-	$('#current-weather-container')
-			.append(
-					'<div id = "current-weather-container" class="w3-card-2 w3-blue w3-round-small w3-center w3-padding">'
-							+ '<h3>Sorry, but geolocation are not available</h3>'
-							+ '</div>');
+	$('#current-weather-container').html(
+			'<div class="w3-card-2 w3-blue w3-round-small w3-center w3-padding">'
+					+ '<h3>Sorry, but geolocation are not available</h3>'
+					+ '</div>');
 }
 
 var onGeolocationSuccess = function(data) {
+	alert(data.name);
 	$('#current-weather-container')
-			.append(
-					'<div id = "current-weather-container" class="w3-row w3-card-2 w3-blue w3-round-small">'
-							+ '<div class = " w3-panel w3-col s8">'
+			.html(
+					'<div class = " w3-panel w3-col s8">'
 							+ '<h3 id="geo_city"></h3>'
 							+ '</div>'
 							+ '<div class = "w3-col s4 w3-white w3-padding-large" align = "center">'
 							+ '<h3 id="geo_temp"></h3>'
-							+ '<img id="geo_img" src = "">'
-							+ '</div>'
-							+ '</div>')
-	$("#geo_city").text(data.city.name);
-	var temp = Math.round(data.list[0].main.temp - 273.15);
-	var image = "http://openweathermap.org/img/w/"
-			+ data.list[0].weather[0].icon + ".png";
+							+ '<img id="geo_img" src = "">' + '</div>')
+	$("#geo_city").text(data.name);
+	var temp = Math.round(data.main.temp - 273.15);
+	var image = "../css/images/" + data.weather[0].icon + ".png";
 	$("#geo_img").attr('src', image);
 	$("#geo_temp").text(temp + " °C");
 }
 
 var onGeolocationError = function() {
-	$('#current-weather-container')
-			.append(
-					'<div id = "current-weather-container" class="w3-card-2 w3-blue w3-round-small w3-center w3-padding">'
-							+ '<h3>Sorry, but internet are not available</h3>'
-							+ '</div>');
+	$('#current-weather-container').html(
+			'<div class="w3-card-2 w3-blue w3-round-small w3-center w3-padding">'
+					+ '<h3>Sorry, but internet are not available</h3>'
+					+ '</div>');
 }
 
 var onComplete = function() {
