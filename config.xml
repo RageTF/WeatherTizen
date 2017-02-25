@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/Weather" version="1.0.0" viewmodes="maximized">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
+	id="http://yourdomain/Weather" version="1.0.0" viewmodes="maximized">
+
 	<access origin="*" subdomains="true"></access>
-    <tizen:application id="uQ3Q5J0rIc.Weather" package="uQ3Q5J0rIc" required_version="2.3"/>
-    <content src="src/index.html"/>
-    <feature name="http://tizen.org/feature/screen.size.all"/>
-    <icon src="icon.png" height="117" width="117"/>
-    <name>PocketMeteo</name>
-    <tizen:privilege name="http://tizen.org/privilege/internet"/>
-    <tizen:privilege name="http://tizen.org/privilege/download"/>
-    <tizen:profile name="mobile"/>
+	<tizen:application id="uQ3Q5J0rIc.Weather" package="uQ3Q5J0rIc"
+		required_version="2.3" />
+	<content src="src/index.html" />
+	<feature name="http://tizen.org/feature/screen.size.all" />
+	<icon src="icon.png" height="117" width="117" />
+	<name>PocketMeteo</name>
+	<tizen:privilege name="http://tizen.org/privilege/internet" />
+	<tizen:privilege name="http://tizen.org/privilege/download" />
+	<tizen:privilege name="http://tizen.org/privilege/location" />
+	<tizen:profile name="mobile" />
 </widget>

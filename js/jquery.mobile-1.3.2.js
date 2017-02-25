@@ -991,13 +991,11 @@ $.widget( "mobile.widget", {
 			html: "",
 
 			// the text to be displayed when the popup is shown
-			text: "loading"
+
+			text: ""
 		},
 
-		defaultHtml: "<div class='" + loaderClass + "'>" +
-			"<span class='ui-icon ui-icon-loading'></span>" +
-			"<h1></h1>" +
-			"</div>",
+		defaultHtml: "",
 
 		// For non-fixed supportin browsers. Position at y center (if scrollTop supported), above the activeBtn (if defined), or just 100px from top
 		fakeFixLoader: function() {

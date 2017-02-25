@@ -37,11 +37,11 @@ function putWeatherCity(idCity, nameCity, weatherCityJson, onSuccessInsert,
 				transaction
 						.executeSql(
 								("INSERT INTO " + weatherDataTableName + " (city_id,city_name,city_weather) VALUES(?,?,?)"),
-								[ idCity, nameCity, JSON.stringify(weatherCityJson) ],
+								[ idCity, nameCity,
+										JSON.stringify(weatherCityJson) ],
 								function() {
 									onSuccessInsert(weatherCityJson);
-								}, 
-								function () {
+								}, function() {
 									onErrorInsert(weatherCityJson);
 								});
 			});
@@ -51,7 +51,8 @@ function putWeatherCity(idCity, nameCity, weatherCityJson, onSuccessInsert,
  * OnSuccessCallback(result) вызывается при успешном обращении к базе данных. --
  * result - данные полученные в результате запроса.
  * 
- * OnErrorCallback вызывается при неудачном запросе. Или если по запросу ничего не найдено!
+ * OnErrorCallback вызывается при неудачном запросе. Или если по запросу ничего
+ * не найдено!
  */
 
 /*
@@ -92,33 +93,35 @@ function getWeatherFromDatabase(onSuccessCallback, onErrorCallback) {
 }
 
 /*
- * Все понятно! Обновляем записи в базе данных!
- * бновляет JSON города оп id;
+ * Все понятно! Обновляем записи в базе данных! бновляет JSON города оп id;
  */
-function updateWeatherByCityId(idCity, weatherJSON, onSuccessUpdate,onErrorUpdate) {
-	database.transaction(function(transaction) {
-				transaction.executeSql(
+function updateWeatherByCityId(idCity, weatherJSON, onSuccessUpdate,
+		onErrorUpdate) {
+	database
+			.transaction(function(transaction) {
+				transaction
+						.executeSql(
 								("UPDATE " + weatherDataTableName + " SET city_weather=? WHERE city_id=?"),
-								[ weatherJSON, idCity ], onSuccessUpdate,
-								onErrorUpdate);
+								[ JSON.stringify(weatherJSON), idCity ],
+								onSuccessUpdate, onErrorUpdate);
 			});
 }
 
 /*
- * Удаляет из БД по ID. В onSuccessDelete и onErrorDelete приходя id удаляемого города.
+ * Удаляет из БД по ID. В onSuccessDelete и onErrorDelete приходя id удаляемого
+ * города.
  * 
  */
 
-function removeWeatherByCityId(idCity,onSuccessDelete,onErrorDelete){
+function removeWeatherByCityId(idCity, onSuccessDelete, onErrorDelete) {
 	database.transaction(function(transaction) {
 		transaction.executeSql(
-						("DELETE FROM " + weatherDataTableName + " WHERE city_id=?"),
-						[idCity], 
-						function(){
-							onSuccessDelete(cityId);
-						},
-						function(){
-							onErrorDelete(cityId);
-						});
+				("DELETE FROM " + weatherDataTableName + " WHERE city_id=?"),
+				[ idCity ], function() {
+
+					onSuccessDelete(idCity);
+				}, function() {
+					onErrorDelete(idCity);
+				});
 	});
 }

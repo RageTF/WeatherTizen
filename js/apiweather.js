@@ -12,7 +12,8 @@ function getWeather(params,onSuccess,onError, onComplete) {
 			data : params,
 			success : onSuccess,
 			error : onError,
-			complete : onComplete
+			complete : onComplete,
+			timeout : 5000
 		});
 	});
 }
@@ -34,7 +35,7 @@ function getWeatherByName(nameCity, onSuccess, onError, onComplete) {
 }
 
 // Выводит погоду по координатам. Можно припилить GPS.
-function getWeatherByCoordinates(lat, lon,onSuccess,onError,onComplete) {
+function getWeatherByCoordinates(lat, lon, onSuccess, onError, onComplete) {
 	return getWeather({
 		'lat' : lat,
 		'lon' : lon,
