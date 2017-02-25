@@ -70,6 +70,10 @@ var onError = function() {
 var onComplete = function() {
 }
 
+var onLiClick = function() {
+	window.open("city-info.html");
+};
+
 $(document).bind( 'pageinit', init );
 $(document).unload( unregister );
 

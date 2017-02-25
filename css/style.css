@@ -6,3 +6,7 @@ body{
 	margin-right: 4px;
 	margin-bottom: 20px;
 }
+.my-link{
+	display:block;
+	height:100%;
+}
